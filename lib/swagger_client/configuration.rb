@@ -122,7 +122,7 @@ module SwaggerClient
     attr_accessor :force_ending_format
 
     def initialize
-      @scheme = 'http'
+      @scheme = 'https'
       @host = 'api.smsfusion.com.au'
       @base_path = '/'
       @api_key = {}

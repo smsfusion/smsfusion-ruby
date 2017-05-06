@@ -20,9 +20,11 @@ require 'swagger_client/models/hlr_callback'
 require 'swagger_client/models/hlr_error'
 require 'swagger_client/models/hlr_result'
 require 'swagger_client/models/out_of_credit'
+require 'swagger_client/models/sms_result'
 
 # APIs
-require 'swagger_client/api/default_api'
+require 'swagger_client/api/hlr_api'
+require 'swagger_client/api/sms_api'
 
 module SwaggerClient
   class << self

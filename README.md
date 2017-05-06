@@ -63,7 +63,7 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::DefaultApi.new
+api_instance = SwaggerClient::HLRApi.new
 
 key = "key_example" # String | API Key as generated from the <a href='https://www.smsfusion.com.au/admin/api/'>admin panel</a>
 
@@ -78,19 +78,20 @@ begin
   result = api_instance.get_hlr(key, num, opts)
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DefaultApi->get_hlr: #{e}"
+  puts "Exception when calling HLRApi->get_hlr: #{e}"
 end
 
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://api.smsfusion.com.au/*
+All URIs are relative to *https://api.smsfusion.com.au/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*SwaggerClient::DefaultApi* | [**get_hlr**](docs/DefaultApi.md#get_hlr) | **GET** /hlr/ | HLR number lookup
-*SwaggerClient::DefaultApi* | [**get_hlr_callback**](docs/DefaultApi.md#get_hlr_callback) | **GET** /hlr-callback/ | HLR number lookup with results going to a callback URL
+*SwaggerClient::HLRApi* | [**get_hlr**](docs/HLRApi.md#get_hlr) | **GET** /hlr/ | HLR number lookup
+*SwaggerClient::HLRApi* | [**get_hlr_callback**](docs/HLRApi.md#get_hlr_callback) | **GET** /hlr-callback/ | HLR number lookup with results going to a callback URL
+*SwaggerClient::SMSApi* | [**send_sms**](docs/SMSApi.md#send_sms) | **GET** /sms/ | Send an SMS
 
 
 ## Documentation for Models
@@ -99,6 +100,7 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::HLRError](docs/HLRError.md)
  - [SwaggerClient::HLRResult](docs/HLRResult.md)
  - [SwaggerClient::OutOfCredit](docs/OutOfCredit.md)
+ - [SwaggerClient::SMSResult](docs/SMSResult.md)
 
 
 ## Documentation for Authorization
